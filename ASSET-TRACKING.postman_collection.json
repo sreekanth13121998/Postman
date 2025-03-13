@@ -1,0 +1,401 @@
+{
+	"info": {
+		"_postman_id": "7e7e46d9-47e9-422c-9d94-331311bed2d4",
+		"name": "ASSET-TRACKING",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39915494"
+	},
+	"item": [
+		{
+			"name": "Asset",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"serialNo\":\"ATS008\",\r\n    \"brand\":\"DELL\",\r\n    \"ram\":\"8 GB\",\r\n    \"rom\":\"256 GB\",\r\n    \"processor\":\"Intel i7\",\r\n    \"dateOfIssue\":\"2025-03-06\",\r\n    \"accessories\":[\"N/A\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8999/asset-tracking/api/assets/1009",
+					"host": [
+						"localhost"
+					],
+					"port": "8999",
+					"path": [
+						"asset-tracking",
+						"api",
+						"assets",
+						"1009"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Asset 1002",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serialNo\":\"LT001\",\r\n    \"brand\":\"HP\",\r\n    \"ram\":\"16 GB\",\r\n    \"rom\":\"512 GB\",\r\n    \"processor\":\"Intel i5\",\r\n    \"dateOfIssue\":\"2025-02-06\",\r\n    \"accessories\":[\"Keyboard\",\"Mouse\",\"Bag\",\"Water Bottle\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8999/asset-tracking/api/assets/1002",
+							"host": [
+								"localhost"
+							],
+							"port": "8999",
+							"path": [
+								"asset-tracking",
+								"api",
+								"assets",
+								"1002"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Feb 2025 10:28:34 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"employeeId\": 1002,\n    \"serialNo\": \"LT001\",\n    \"brand\": \"HP\",\n    \"ram\": \"16 GB\",\n    \"rom\": \"512 GB\",\n    \"processor\": \"Intel i5\",\n    \"dateOfIssue\": \"2025-02-06\",\n    \"accessories\": [\n        \"Keyboard\",\n        \"Mouse\",\n        \"Bag\",\n        \"Water Bottle\"\n    ]\n}"
+				},
+				{
+					"name": "Asset 1003",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serialNo\":\"LT002\",\r\n    \"brand\":\"DELL\",\r\n    \"ram\":\"8 GB\",\r\n    \"rom\":\"256 GB\",\r\n    \"processor\":\"Intel i7\",\r\n    \"dateOfIssue\":\"2025-02-06\",\r\n    \"accessories\":[\"Bag\",\"Water Bottle\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8999/asset-tracking/api/assets/1003",
+							"host": [
+								"localhost"
+							],
+							"port": "8999",
+							"path": [
+								"asset-tracking",
+								"api",
+								"assets",
+								"1003"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Feb 2025 10:36:24 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"employeeId\": 1003,\n    \"serialNo\": \"LT002\",\n    \"brand\": \"DELL\",\n    \"ram\": \"8 GB\",\n    \"rom\": \"256 GB\",\n    \"processor\": \"Intel i7\",\n    \"dateOfIssue\": \"2025-02-06\",\n    \"accessories\": [\n        \"Bag\",\n        \"Water Bottle\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8999/asset-tracking/api/assets/employee/1003",
+					"host": [
+						"localhost"
+					],
+					"port": "8999",
+					"path": [
+						"asset-tracking",
+						"api",
+						"assets",
+						"employee",
+						"1003"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Employee 1002",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8999/asset-tracking/api/assets/employee/1002",
+							"host": [
+								"localhost"
+							],
+							"port": "8999",
+							"path": [
+								"asset-tracking",
+								"api",
+								"assets",
+								"employee",
+								"1002"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Feb 2025 10:30:23 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"employeeId\": 1002,\n        \"serialNo\": \"LT001\",\n        \"brand\": \"HP\",\n        \"ram\": \"16 GB\",\n        \"rom\": \"512 GB\",\n        \"processor\": \"Intel i5\",\n        \"dateOfIssue\": \"2025-02-06\",\n        \"accessories\": [\n            \"Keyboard\",\n            \"Mouse\",\n            \"Bag\",\n            \"Water Bottle\"\n        ]\n    }\n]"
+				},
+				{
+					"name": "Get Employee 1003",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8999/asset-tracking/api/assets/employee/1003",
+							"host": [
+								"localhost"
+							],
+							"port": "8999",
+							"path": [
+								"asset-tracking",
+								"api",
+								"assets",
+								"employee",
+								"1003"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Feb 2025 10:37:00 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 2,\n        \"employeeId\": 1003,\n        \"serialNo\": \"LT002\",\n        \"brand\": \"DELL\",\n        \"ram\": \"8 GB\",\n        \"rom\": \"256 GB\",\n        \"processor\": \"Intel i7\",\n        \"dateOfIssue\": \"2025-02-06\",\n        \"accessories\": [\n            \"Bag\",\n            \"Water Bottle\"\n        ]\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get All Assets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8999/asset-tracking/api/assets/getAllAssets",
+					"host": [
+						"localhost"
+					],
+					"port": "8999",
+					"path": [
+						"asset-tracking",
+						"api",
+						"assets",
+						"getAllAssets"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "All Assets",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8999/asset-tracking/api/assets/getAllAssets",
+							"host": [
+								"localhost"
+							],
+							"port": "8999",
+							"path": [
+								"asset-tracking",
+								"api",
+								"assets",
+								"getAllAssets"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Feb 2025 10:33:17 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"employeeId\": 1002,\n        \"serialNo\": \"LT001\",\n        \"brand\": \"HP\",\n        \"ram\": \"16 GB\",\n        \"rom\": \"512 GB\",\n        \"processor\": \"Intel i5\",\n        \"dateOfIssue\": \"2025-02-06\",\n        \"accessories\": [\n            \"Keyboard\",\n            \"Mouse\",\n            \"Bag\",\n            \"Water Bottle\"\n        ]\n    }\n]"
+				}
+			]
+		}
+	]
+}
